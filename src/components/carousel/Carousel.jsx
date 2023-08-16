@@ -13,7 +13,7 @@ import PosterFallback from "../../assets/no-poster.png";
 import CircleRating from "../circleRating/CircleRating";
 import Genres from "../genres/Genres";
 
-import "./carousel.scss";
+import "./Carousel.scss";
 
 const Carousel = ({ data, loading, endpoint, title }) => {
     const carouselContainer = useRef();

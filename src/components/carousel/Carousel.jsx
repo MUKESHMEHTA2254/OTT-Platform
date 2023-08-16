@@ -17,16 +17,16 @@ import "./carousel.scss";
 
 const Carousel = ({ data, loading, endpoint, title }) => {
     const carouselContainer = useRef();
-    const { url } = useSelector((state) => state.home);
+    const { url } = useSelector((state) => state?.home);
     const navigate = useNavigate();
 
     const navigation = (dir) => {
-        const container = carouselContainer.current;
+        const container = carouselContainer?.current;
 
         const scrollAmount =
             dir === "left"
-                ? container.scrollLeft - (container.offsetWidth + 20)
-                : container.scrollLeft + (container.offsetWidth + 20);
+                ? container?.scrollLeft - (container?.offsetWidth + 20)
+                : container?.scrollLeft + (container?.offsetWidth + 20);
 
         container.scrollTo({
             left: scrollAmount,

@@ -9,12 +9,22 @@ const Recommendation = ({ mediaType, id }) => {
     );
 
     return (
-        <Carousel
-            title="Recommendations"
-            data={data?.results}
-            loading={loading}
-            endpoint={mediaType}
-        />
+        <>
+        {
+            data?.total_pages>0 ?(  <Carousel
+                title="Recommendations"
+                data={data?.results}
+                loading={loading}
+                endpoint={mediaType}
+            />):( <div>
+                    
+                </div>)
+        }
+       
+        
+        
+        </>
+       
     );
 };
 

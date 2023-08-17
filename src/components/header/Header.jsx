@@ -23,7 +23,9 @@ const Header = () => {
 useEffect(()=>{
   window.scrollTo(0,0)
 },[location])
-
+useEffect(()=>{
+setShowSearch(false)
+},[navigate])
 
 
   const ControlNavbar=()=>{
@@ -79,7 +81,9 @@ setMobileMenu(false)
   return (
     <header className={`header ${mobileMenu ? "mobileView" : ""} ${show}`}>
       <ContentWrapper>
-        <div className="logo ">
+        <div className="logo " onClick={()=>{
+          navigate("/")
+        }}>
           <img src={logo} alt="" />
         </div>
         <ul className="menuItems">
